@@ -11,6 +11,6 @@ public class CharacterDesign extends Artwork{
 	}
 	
 	public String toString() {
-		return "CharacterDesign"+ super.toString()+", Character type: "+ characterType;
+		return "CharacterDesign"+ super.toString()+"Character type: "+ characterType;
 	}
 }

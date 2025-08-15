@@ -21,7 +21,8 @@ public class GenerateInvoice {
             writer.write("Customer Email: " + customer.getEmail() + "\n");
             writer.write("Artwork Title: " + artwork.getTitle() + "\n");
             writer.write("Artist: " + artwork.getArtist() + "\n");
-            writer.write("Price: $" + artwork.getbasePrice()* (artwork.discount/100) +artwork.getbasePrice() + "\n");
+            writer.write("Price: $" + artwork.getbasePrice()+ "\n");
+            writer.write("Final price after discount: $" + artwork.calculateFinalPrice()+ "\n");
             writer.write("=================\n");
 
             System.out.println("Invoice saved to: " + fileName);

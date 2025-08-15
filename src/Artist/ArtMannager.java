@@ -9,7 +9,17 @@ public class ArtMannager {
     
     public void addArtwork() {
     	System.out.println("Enter Artwork type (landscape or portrait or character):");
-    	String type = sc.nextLine().toLowerCase();
+    	String type;
+    	while (true) {
+        	type = sc.nextLine().toLowerCase();
+
+            if (type.equals("landscape") || type.equals("portrait") || type.equals("character")) {
+                break;
+            } else {
+                System.out.println("Invalid type! Please try again.\n");
+                System.out.println("Enter Artwork type (landscape or portrait or character):");
+            }
+        }
     	
     	System.out.println("Artwork Name : ");
     	String title = sc.nextLine();
@@ -18,7 +28,23 @@ public class ArtMannager {
     	System.out.println("Artist name : ");
     	String artist = sc.nextLine();
     	System.out.println("Price of the artwork : ");
-    	double price = sc.nextDouble();
+    	double price;
+    	while (true) {
+            try {
+                if (!sc.hasNextDouble()) {
+                    sc.nextLine();
+                    throw new Invalid_Choice_Exception("Please enter a valid price :\n");
+                }
+                price = sc.nextDouble();
+                break;
+                
+            } catch (Invalid_Choice_Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        }
+    	
+    	
+    	
     	sc.nextLine();
     	System.out.println("Available discount on percentage: ");
     	double discount = sc.nextDouble();
@@ -57,7 +83,21 @@ public class ArtMannager {
     			System.out.println("Enter new artist name: ");
     			a.artist = sc.nextLine();
     			System.out.println("Enter new price: ");
-    			a.basePrice = sc.nextDouble();
+    			
+    			while (true) {
+    	            try {
+    	                if (!sc.hasNextDouble()) {
+    	                    sc.nextLine();
+    	                    throw new Invalid_Choice_Exception("Please enter a valid price :\n");
+    	                }
+    	                a.basePrice = sc.nextDouble();
+    	                break;
+    	                
+    	            } catch (Invalid_Choice_Exception e) {
+    	                System.out.println("Error: " + e.getMessage());
+    	            }
+    	        }
+    			
     			sc.nextLine();
     			System.out.println("\n-----Artwork information updated successfully.-----\n");
     			return;

@@ -1,8 +1,6 @@
 package Artist;
 
-
-
-public class Artwork {
+public class Artwork implements Sellable{
     protected String id;
     protected String title;
     protected String artist;
@@ -39,6 +37,13 @@ public class Artwork {
     }
 
     public String toString() {
-        return "ID: " + id + ", Title: " + title + ", Artist: " + artist + ", Price: $" + basePrice + ", Discount: " + discount;
+        return "ID: " + id +"\n"+ "Title: " + title +"\n"+ "Artist: " + artist + "\n"+"Price: $" + basePrice +"\n"+ "Discount: " + discount+"\n"+"Final price :"+calculateFinalPrice()+"\n";
     }
+
+	@Override
+	public double calculateFinalPrice() {
+		// TODO Auto-generated method stub
+		double discountedPrice = basePrice - (basePrice * (discount / 100));
+        return discountedPrice;
+	}
 }

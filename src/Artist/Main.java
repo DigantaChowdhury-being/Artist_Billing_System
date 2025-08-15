@@ -11,8 +11,9 @@ public class Main {
 
 	public static void startConsoleApp() {
 		System.out.println("Welcome to Artist Billing System.");
-		int choice = 0;
+		
 		Scanner sc = new Scanner(System.in);
+        int choice = 0;
 		
 		ArtMannager manager = new ArtMannager();
 		AddCustomer addCustomer = new AddCustomer();
@@ -25,9 +26,30 @@ public class Main {
             System.out.println("6. View customers.");
             System.out.println("7. Generate invoice.");
             System.out.println("8. Exit");
-            System.out.print("Enter choice: ");
-            choice = sc.nextInt();
-            sc.nextLine();
+            
+            while (true) {
+                try {
+                    System.out.print("Enter choice (1-8): ");
+                    
+                    if (!sc.hasNextInt()) {
+                        sc.nextLine();
+                        throw new Invalid_Choice_Exception("Please enter a number between 1 and 8.");
+                    }
+                    
+                    choice = sc.nextInt();
+                    sc.nextLine();
+
+                    if (choice < 1 || choice > 8) {
+                        throw new Invalid_Choice_Exception("Choice must be between 1 and 8.");
+                    }
+                    break;
+                    
+                } catch (Invalid_Choice_Exception e) {
+                    System.out.println("Error: " + e.getMessage());
+                }
+            }
+
+            System.out.println("You selected: " + choice);
             
             switch (choice) {
             case 1:

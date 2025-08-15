@@ -10,7 +10,7 @@ public class Portrait extends Artwork{
 	}
 	
 	public String toString() {
-		return "Protrait" + super.toString()+ ", Subject name : "+ Subjectname; 
+		return "Protrait" + super.toString()+ "Subject name : "+ Subjectname; 
 	}
 
 }

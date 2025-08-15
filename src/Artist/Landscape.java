@@ -10,7 +10,7 @@ public class Landscape extends Artwork {
 	}
 	
 	public String toString() {
-		return "Landscape "+super.toString() +", Scenery type : "+ sceneryType;
+		return "Landscape "+super.toString() +"Scenery type : "+ sceneryType;
 	}
 
 }
