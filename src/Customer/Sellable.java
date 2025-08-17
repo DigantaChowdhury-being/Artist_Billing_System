@@ -1,4 +1,4 @@
-package Artist;
+package Customer;
 
 public interface Sellable {
 	double calculateFinalPrice();

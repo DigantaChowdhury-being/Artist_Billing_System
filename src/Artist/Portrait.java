@@ -1,5 +1,5 @@
 package Artist;
-
+import Customer.*;
 public class Portrait extends Artwork{
 	protected String Subjectname;
 	public Portrait(String id, String title, String artist, double basePrice, String Subjectname,double discount) {

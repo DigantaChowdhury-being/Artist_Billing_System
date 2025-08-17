@@ -1,5 +1,5 @@
 package Artist;
-
+import Customer.*;
 public class Landscape extends Artwork {
 	protected String sceneryType;
 	

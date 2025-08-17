@@ -1,5 +1,5 @@
 package Artist;
-
+import Customer.*;
 public class Artwork implements Sellable{
     protected String id;
     protected String title;

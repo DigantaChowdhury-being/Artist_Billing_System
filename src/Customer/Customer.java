@@ -1,5 +1,5 @@
-package Artist;
-
+package Customer;
+import Artist.*;
 public class Customer {
     private String name;
     private String email;

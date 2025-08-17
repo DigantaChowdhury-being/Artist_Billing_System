@@ -1,7 +1,9 @@
 package Artist;
-
+import Customer.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import Customer.Invalid_Choice_Exception;
 
 public class ArtMannager {
     ArrayList<Artwork> artworks = new ArrayList<>();

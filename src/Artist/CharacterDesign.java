@@ -1,5 +1,5 @@
 package Artist;
-
+import Customer.*;
 public class CharacterDesign extends Artwork{
 	protected String characterType;
 	public CharacterDesign(String id, String title, String artist, double basePrice, String characterType,double discount) {

@@ -1,5 +1,5 @@
-package Artist;
-
+package Customer;
+import Artist.*;
 import java.io.FileWriter;
 import java.io.IOException;
 

@@ -1,6 +1,6 @@
 package Artist;
 import java.util.*;
-
+import Customer.*;
 public class Main {
 
 	public static void main(String[] args) {
@@ -14,8 +14,10 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
         int choice = 0;
-		
+        
+        
 		ArtMannager manager = new ArtMannager();
+		
 		AddCustomer addCustomer = new AddCustomer();
 		while(true) {
 			System.out.println("1. Add artwork.");
@@ -70,7 +72,6 @@ public class Main {
                 System.out.println();
                 System.out.print("Enter email: ");
                 String email = sc.nextLine();
-                sc.nextLine();
                 System.out.print("Enter phone: ");
                 String phone = sc.nextLine();
                 Customer newCustomer = new Customer(cname, email, phone);

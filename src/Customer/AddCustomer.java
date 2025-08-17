@@ -1,4 +1,5 @@
-package Artist;
+package Customer;
+import Artist.*;
 import java.util.ArrayList;
 
 public class AddCustomer {
