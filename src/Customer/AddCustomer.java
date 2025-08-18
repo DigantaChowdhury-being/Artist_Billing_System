@@ -10,10 +10,6 @@ public class AddCustomer {
         System.out.println("Customer added successfully.");
     }
 
-    public ArrayList<Customer> getAllCustomers() {
-        return customers;
-    }
-    
     public void viewAllCustomers() {
         if (customers.isEmpty()) {
             System.out.println("No customers found.");

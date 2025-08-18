@@ -1,8 +1,0 @@
-==== Invoice ====
-Customer Name: Diganta
-Customer Email: Diganta@gmail.com
-Artwork Title: sdjf
-Artist: Dfsdf
-Price: $234.0
-Final price after discount: $117.0
-=================
